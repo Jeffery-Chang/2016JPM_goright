@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="26px" height="23px" viewBox="0 0 26 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 2 + Group 2 Mask</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="-6.10622664e-13" y="-1.03361764e-13" width="11.9191574" height="21.0026099" rx="2"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="11.9191574" height="21.0026099" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="11.9191574" height="21.0026099" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <rect id="path-5" x="-7.49622586e-13" y="-9.99200722e-16" width="11.9191574" height="21.0026099" rx="2"></rect>
+        <mask id="mask-6" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="11.9191574" height="21.0026099" fill="white">
+            <use xlink:href="#path-5"></use>
+        </mask>
+        <mask id="mask-8" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="11.9191574" height="21.0026099" fill="white">
+            <use xlink:href="#path-5"></use>
+        </mask>
+        <rect id="path-9" x="8.47766302e-13" y="-1.48547841e-13" width="10.8067985" height="19.0425351" rx="1"></rect>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="top" transform="translate(-150.000000, -78.000000)">
+            <g id="Group-2-+-Group-2-Mask">
+                <g transform="translate(162.293653, 90.462399) rotate(9.000000) translate(-162.293653, -90.462399) translate(145.293653, 74.462399)">
+                    <g id="Group-2" transform="translate(13.385000, 16.279776) rotate(-31.000000) translate(-13.385000, -16.279776) translate(5.385000, 3.779776)">
+                        <g id="Rectangle-2" transform="translate(7.899381, 12.355452) rotate(10.000000) translate(-7.899381, -12.355452) translate(1.899381, 1.355452)">
+                            <mask id="mask-3" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <g id="Mask" stroke="#07668F" mask="url(#mask-2)" stroke-width="2" fill="#2C7A9B">
+                                <use mask="url(#mask-4)" xlink:href="#path-1"></use>
+                            </g>
+                        </g>
+                    </g>
+                    <g id="Group-2" transform="translate(18.298132, 14.590307) rotate(-21.000000) translate(-18.298132, -14.590307) translate(10.298132, 2.090307)">
+                        <g id="Rectangle-2" transform="translate(7.899381, 12.355452) rotate(10.000000) translate(-7.899381, -12.355452) translate(1.899381, 1.355452)">
+                            <mask id="mask-7" fill="white">
+                                <use xlink:href="#path-5"></use>
+                            </mask>
+                            <g id="Mask" stroke="#07668F" mask="url(#mask-6)" stroke-width="2" fill="#2C7A9B">
+                                <use mask="url(#mask-8)" xlink:href="#path-5"></use>
+                            </g>
+                        </g>
+                    </g>
+                    <g id="Group-2" transform="translate(23.732777, 14.645493) rotate(-11.000000) translate(-23.732777, -14.645493) translate(16.232777, 3.145493)">
+                        <g id="Rectangle-2" transform="translate(7.216595, 11.238961) rotate(10.000000) translate(-7.216595, -11.238961) translate(1.716595, 1.238961)">
+                            <mask id="mask-10" fill="white">
+                                <use xlink:href="#path-9"></use>
+                            </mask>
+                            <use id="Mask" fill="#EBC02B" xlink:href="#path-9"></use>
+                            <rect fill="#0A783F" opacity="0.104127799" mask="url(#mask-10)" x="8.4288132e-13" y="-9.99200722e-14" width="5.40339924" height="19.0425351"></rect>
+                        </g>
+                        <polygon id="Fill-663" fill="#FFFFFF" transform="translate(7.454340, 10.236801) rotate(10.000000) translate(-7.454340, -10.236801) " points="7.45434015 7.3185755 8.3818889 9.23984157 10.4562286 9.54794376 8.95519037 11.0434791 9.30962568 13.1550266 7.45434015 12.1582593 5.59905462 13.1550266 5.95348993 11.0434791 4.45245169 9.54794376 6.5267914 9.23984157"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

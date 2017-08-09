@@ -1,0 +1,550 @@
+// css3
+@import "compass/css3";
+// font style
+@import "typography";
+@import "color";
+// icon
+@import "icon";
+// mixin
+@import "mixin";
+// flag
+@import "style";
+// all style
+body,
+* {
+    -webkit-font-smoothing: antialiased;
+    @include box-sizing(border-box);
+}
+
+// a style
+a {
+    text-decoration: none;
+    @include transition(.5s);
+}
+
+// nav
+// .current_game{
+//  background-color: $morgan_blue;
+//  color: #FFF;
+//  border-bottom-color: $morgan_blue;
+//  &:hover{
+//      color: $highlight_yellow;
+//      border-bottom-color:  $highlight_yellow;
+//  }
+//  img{
+//      vertical-align: middle;
+//      display: inline-block;
+//      margin: 0 5px;
+//  }
+// }
+section {
+    @media only screen and (max-height: 780px) {
+        height: auto;
+        overflow: auto;
+    }
+}
+
+.mid {
+    @include pos-mid;
+    @media only screen and (max-height: 780px) {
+        @include none-mid;
+        margin-top: 170px;
+        padding-bottom: 100px;
+    }
+}
+// loading
+.loading{
+    @extend %gray_style;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 200;
+    .box{
+        background: url(../img/game/loading.svg) no-repeat;
+        width: 100px;
+        height: 105px;
+        @include pos-mid;
+        p{
+            padding-top: 10px;
+            @include text_style(22px, 800, $score_color);
+            .percent{
+                @include font-size(13px);
+            }
+        }
+    }
+}
+
+
+// game style
+.game {
+    @extend %gray_style;
+    h2 {
+        @extend %blue_flag;
+        text-align: center;
+        @extend %blue_title;
+    }
+    p {
+        padding: 15px 0;
+        .high {
+            display: block;
+            @include font-size(24px);
+        }
+    }
+    // poker
+    .poker_index {
+        width: calc(160px * 4);
+        @include box-sizing(border-box);
+        padding: 10px 160px 10px 0;
+        .card {
+            display: inline-block;
+            width: 140px;
+            margin: 0 5px;
+            img {
+                width: 100%;
+            }
+        }
+    }
+    // btn
+    .game_btn {
+        @include btn($morgan_orange, $morgan_blue);
+        .go {
+            color: #F8C73E;
+        }
+        .trangle {
+            @extend %bebox;
+            @include arrow(right, 6px, #F8C73E);
+        }
+    }
+    .hand {
+        position: absolute;
+        pointer-events: none;
+        font-size: 0;
+        bottom: 0;
+        right: 0;
+        width: 38%;
+        @media only screen and (max-width: 1024px) {
+            width: 38%;
+        }
+        @media only screen and (min-width: 1025px) and (max-width: 1200px) {
+            width: 38%;
+        }
+        @media only screen and (min-width: 1201px) and (max-width: 1599px) {
+            right: 5%;
+            width: 33%;
+        }
+        @media only screen and (min-width: 1600px) {
+            width: 35%;
+        }
+        @media only screen and (min-height: 780px) and (max-width: 1201px) {
+            width: 40%;
+            right: 0;
+        }
+        img {
+            width: 100%;
+        }
+    }
+}
+
+// flip style
+.flip {
+    @extend %gray_style;
+    .rule_word {
+        text-align: center;
+        @include font-size(22px);
+        color: $morgan_blue;
+        padding-bottom: 30px;
+        .circle {
+            @include circle(35px);
+            background-color: $morgan_blue;
+            position: relative;
+            vertical-align: middle;
+            margin-right: 10px;
+            p {
+                @include pos-mid;
+                color: #FFF;
+                font-weight: 900;
+                @include font-size(24px);
+            }
+        }
+    }
+    // flip
+    .poker_flip {
+        width: calc(160px * 5);
+        .card {
+            display: inline-block;
+            width: 140px;
+            margin: 5px 5px 0 5px;
+            img {
+                width: 100%;
+            }
+        }
+    }
+    // score
+    .score {
+        background: url(../img/game/svg/cup.svg) no-repeat;
+        width: 170px;
+        height: 178px;
+        position: absolute;
+        bottom: 0;
+        left: 10%;
+        text-align: center;
+        @media only screen and (max-width: 1360px) {
+            left: 3%;
+        }
+        h4 {
+            @include text_style(16px, 400, $font_gray);
+            padding-top: 20px;
+        }
+        .achievement {
+            @include text_style(34px, 800, $score_color);
+            line-height: 1;
+            .percent {
+                @include font-size(16px);
+            }
+        }
+    }
+}
+
+// cup style
+.a_award {
+    background: url(../img/game/svg/A_award.svg) no-repeat;
+    h5 {
+        @include text_style(12px, 500, #D5630D);
+    }
+}
+
+.b_award {
+    background: url(../img/game/svg/B_award.svg) no-repeat;
+    h5 {
+        @include text_style(12px, 500, #FFF);
+    }
+}
+
+.c_award {
+    background: url(../img/game/svg/C_award.svg) no-repeat;
+    h5 {
+        @include text_style(12px, 500, #FFF);
+    }
+}
+
+.d_award {
+    background: url(../img/game/svg/D_award.svg) no-repeat;
+    h5 {
+        @include text_style(12px, 500, #0E8346);
+        padding-top: 5px;
+    }
+}
+
+// award
+.award_wrap {
+    @extend %gray_style;
+    @extend %award_bg;
+    position: relative;
+    .box {
+        background-color: #F2F2F2;
+        @include border-radius(16px);
+        width: 688px;
+        margin: 180px auto 0 auto;
+        position: relative;
+        .award_cup {
+            width: 288px;
+            height: 283px;
+            position: absolute;
+            margin: auto;
+            left: 0;
+            right: 0;
+            top: -50px;
+            .score {
+                padding-top: 60px;
+                @include text_style(44px, 800, #FFF);
+                .percent {
+                    @include font-size(24px);
+                }
+            }
+            h2 {
+                padding-top: 65px;
+                @include text_style(26px, 800, #FFF);
+            }
+        }
+        h3 {
+            padding: 250px 0 5px 0;
+            @include text_style(16px, 600, $font_gray);
+            [class^='high_'] {
+                @extend .high;
+                @include font-size(18px);
+            }
+            .high_b {
+                color: #0E7EAE;
+            }
+            .high_c {
+                color: #58497D;
+            }
+            .high_d {
+                color: #0D964F;
+            }
+        }
+        p {
+            @include font-size(14px);
+            padding: 15px 0;
+        }
+    }
+}
+
+// share fb
+.share_fb {
+    display: inline-block;
+    margin-left: 10px;
+    @include btn($fb_blue, $font_gray);
+    .ic-fb {
+        display: inline-block;
+        padding-left: 10px;
+    }
+}
+
+.play_again {
+    display: inline-block;
+    @include btn($morgan_orange, $font_gray);
+}
+
+// people
+.people {
+    position: absolute;
+    bottom: 0;
+    pointer-events: none;
+}
+
+.people_box {
+    font-size: 0;
+    .arni {
+        left: 20%;
+    }
+    .plant {
+        right: 20%;
+    }
+    @media only screen and (max-width: 1440px) {
+        .arni {
+            left: 10%;
+        }
+        .plant {
+            right: 10%;
+        }
+    }
+}
+
+// people c
+.people_c {
+    .plant {
+        right: 16%;
+    }
+    @media only screen and (max-width: 1440px) {
+        .plant {
+            right: 6%;
+        }
+    }
+}
+
+// people d
+.people_d {
+    .plant {
+        right: 16%;
+    }
+    @media only screen and (max-width: 1440px) {
+        .plant {
+            right: 5%;
+        }
+    }
+}
+
+// game pop
+.game_pop {
+    background-color: rgba(131, 131, 131, .75);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 5;
+    overflow: hidden;
+    .pop_mid {
+        @include pos-mid;
+        background-color: #FFF;
+        padding: 20px 30px;
+        width: 800px;
+        top: 58%;
+        @include border-radius(16px);
+        h2 {
+            @extend %blue_flag;
+            text-align: center;
+            @extend %blue_title;
+            position: absolute;
+            width: 500px;
+            height: 77px;
+            background-size: 100%;
+            @include font-size(28px);
+            padding-top: 10px;
+            margin: auto;
+            left: 0;
+            right: 0;
+            top: -30px;
+        }
+        .pop_wording {
+            padding-top: 40px;
+        }
+        p {
+            @include font-size(16px);
+            line-height: 1.3;
+            .high {
+                @include text_style(26px, 800, $morgan_blue);
+            }
+        }
+        // form
+        .form {
+            width: 600px;
+            margin: auto;
+            // color
+            .chart_color {
+                p {
+                    @include text_style(11px, 400, null);
+                    text-align: left;
+                    position: relative;
+                    margin-left: 30px;
+                    padding: 3px 0;
+                    &:before {
+                        content: "";
+                        display: block;
+                        width: 15px;
+                        height: 5px;
+                        @include pos-mid;
+                        left: -15px;
+                    }
+                }
+                padding: 10px 0;
+            }
+            // color
+            .chart_a {
+                color: #0077A5;
+                &:before {
+                    background-color: #0077A5;
+                }
+            }
+            .chart_b {
+                color: #F39A2C;
+                &:before {
+                    background-color: #F39A2C;
+                }
+            }
+            .chart_c {
+                color: #CF1D02;
+                &:before {
+                    background-color: #CF1D02;
+                }
+            }
+            // chart
+            img {
+                width: 60%;
+                vertical-align: middle;
+            }
+            // word
+            .word {
+                display: inline-block;
+                vertical-align: top;
+                width: 25%;
+                p {
+                    @include text_style(14px, 400, null);
+                    text-align: left;
+                    padding: 5px 0;
+                }
+            }
+            //form
+            .form_top {
+                padding-top: 15px;
+            }
+            ul {
+                font-size: 0;
+                li {
+                    display: inline-block;
+                    width: 20%;
+                    @include text_style(14px, 400, $font_gray);
+                    background-color: #E9E9E9;
+                    margin: 1px 0;
+                    padding: 3px 0;
+                    &:first-child {
+                        width: 30%;
+                    }
+                }
+            }
+            .form_list {
+                margin: 10px;
+                ul:first-child li {
+                    background-color: $morgan_blue;
+                    color: #FFF;
+                }
+                &:last-child {
+                    ul:first-child li {
+                        background-color: $morgan_orange;
+                        color: #FFF;
+                    }
+                }
+            }
+        }
+        // from
+        .from {
+            @include text_style(11px, 400, #666);
+            padding-top: 10px;
+        }
+        // poker
+        .poker {
+            position: absolute;
+            bottom: 0;
+            left: -13%;
+        }
+        // close btn
+        .close_btn {
+            position: absolute;
+            right: -48px;
+            a {
+                display: block;
+                background-color: $morgan_blue;
+                color: #FFF;
+                padding: 5px 15px 5px 15px;
+                @include font-size(18px);
+                @include border-right-radius(18px);
+                &:hover {
+                    background-color: $morgan_orange;
+                }
+            }
+        }
+    }
+    // plant
+    .plant {
+        font-size: 0;
+        position: absolute;
+        bottom: -8%;
+        right: 3%;
+        @media only screen and (max-width: 1024px) {
+            right: -3%;
+        }
+    }
+}
+
+// point
+@import "animation";
+.point_box {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -30px;
+    width: 100%;
+    .point {
+        @include text_style(40px, 800, null);
+        line-height: 1;
+        position: absolute;
+        width: 100%;
+    }
+    .gain {
+        color: #D5620D;
+        @include animation(pop 1s infinite ease);
+    }
+    .lose {
+        color: #0D964F;
+        @include animation(pop 1s infinite ease);
+    }
+}

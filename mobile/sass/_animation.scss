@@ -1,0 +1,48 @@
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@mixin animation($str) {
+    -webkit-animation: #{$str};
+    -moz-animation: #{$str};
+    -ms-animation: #{$str};
+    -o-animation: #{$str};
+    animation: #{$str};
+}
+
+@include keyframes(pop) {
+    0% {
+       @include transform(scale(1));       
+    }
+    50% {
+        @include transform(scale(1));
+        @include opacity(1);        
+    }
+    70% {
+        @include transform(scale(1.1));
+        @include opacity(1);
+    }
+    100% {
+        @include transform(scale(1));
+        @include opacity(0);        
+    }
+}
+@include keyframes(spin) {
+    100% {
+        transform: rotate(360deg);
+    }
+}

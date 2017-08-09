@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="267px" height="156px" viewBox="0 0 267 156" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>Mask</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M17.0983638,3.88533787 C17.0983638,3.88533787 2.63051761,0.646212773 2.63051756,29.7760792 C2.63051751,58.9059456 -3.28814693,96.8515806 2.63051756,117.49961 C8.54918205,138.147639 -7.83332951,154.999989 27.1060587,155 C62.0454468,155.000011 148.400975,146.07293 186.731557,150.536463 C225.062139,154.999996 265.24037,157.45253 265.240357,137.476072 C265.240343,117.499613 265.240375,81.4499617 265.240361,57.1212726 C265.240348,32.7925834 265.953709,10.1006726 245.229579,5.49933469 C220.59738,0.0302958067 184.22976,-0.389448851 151.326807,0.20097174 C100.210962,1.11821 43.0954127,0.200971877 33.2618047,0.200971845 C17.0983641,0.200971793 17.0983638,3.88533787 17.0983638,3.88533787 Z" id="path-1"></path>
+    </defs>
+    <g id="mobile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="m_fill" transform="translate(-25.000000, -2295.000000)">
+            <g id="part03" transform="translate(20.000000, 2036.000000)">
+                <g id="01">
+                    <g id="left" transform="translate(5.000000, 222.000000)">
+                        <g id="Page-1" transform="translate(0.847345, 37.074950)">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <use id="Mask" fill="#F2F2F2" xlink:href="#path-1"></use>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,47 @@
+%blue_flag {
+    background: url(../img/game/svg/flag.svg) no-repeat;
+    width: 566px;
+    height: 87px;
+}
+
+%blue_title {
+    @include text_style(32px, 600, #FFF);
+    padding-top: 15px;
+}
+
+.high {
+    color: $morgan_orange;
+    font-weight: bold;
+}
+
+p {
+    @include text_style(18px, 400, $font_gray);
+}
+
+// btn
+@mixin btn($btn_color,$hover_color) {
+    a {
+        background-color: $btn_color;
+        @include border-radius(10px);
+        display: inline-block;
+        @include vm;
+        @include text_style(20px, 600, #FFF);
+        vertical-align: middle;
+        padding: 10px 40px;
+        margin: 15px 0 0 0;
+        @include transition(.5s);
+        &:hover{
+          background-color: $hover_color;
+        }
+    }
+}
+
+%bebox{
+  display: inline-block;
+  margin: 0 10px;
+  vertical-align: middle;
+}
+
+%award_bg {
+    background: url(../img/game/bg.png)center center no-repeat;
+}

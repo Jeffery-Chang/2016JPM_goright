@@ -1,0 +1,38 @@
+@function pxrem($px, $content: 16px) {
+    @return ($px / $content) * 1rem;
+}
+@mixin font-size($size) {
+    font-size: $size;
+    font-size: pxrem($size);
+}
+// type related
+%text_style {
+    font-family: "Noto Sans TC", sans-serif ,微軟正黑體;
+    font-style: normal;
+    line-height: 1.5;
+}
+
+$size:16px;
+$weight:600;
+$letterspace:pxrem(0.8px);
+$fontcolor: #000;
+$text-align: center;
+body {
+    @include font-size($size);
+    font-family: "Noto Sans TC", sans-serif ,微軟正黑體;
+    font-style: normal;
+}
+
+@mixin text_style($size, $weight, $fontcolor) {
+    // @extend %text_style;
+    font-size: $size;
+    font-size: pxrem($size);
+    font-weight: $weight;
+    color: $fontcolor;
+}
+
+// google font
+@font-face {
+    // @import url(http://fonts.googleapis.com/earlyaccess/notosanstc.css);
+    font-family: ‘Noto Sans TC’, sans-serif;
+}

@@ -1,0 +1,193 @@
+.no-show {
+    display: none;
+}
+
+// for whole width & height
+html,
+body {
+    @include box-size($box_w, 100%);
+    -webkit-font-smoothing: antialiased;
+    @include fontstyle(16px, null, $lineheight, $fontweight);
+    text-align: center;
+    a {
+        text-decoration: none;
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: $bg_color no-repeat center;
+}
+
+.main {
+    text-align: -webkit-center;
+    position: relative;
+}
+
+section {
+    margin: 0 auto;
+    overflow: hidden;
+    height: 100%;
+    position: relative;
+}
+
+.wrap,
+.main {
+    @include box-size($box_w, 100%);
+}
+
+// header
+.main >header {
+    position: fixed;
+    @include box-size($box_w, 70px);
+    background: $white no-repeat center;
+    border-bottom: 6px solid $gray;
+    @include box-sizing(border-box);
+    padding-top: 15px;
+    text-align: initial;
+    z-index: 100;
+    .logo_ch {
+        background: url(../img/morgan_logo.png) no-repeat left bottom;
+        @include box-size(107px, 55px);
+        background-size: 100%;
+        display: block;
+    }
+}
+
+// nav
+nav {
+    position: fixed;
+    top: 70px;
+    background: #F2F2F2;
+    text-align: center;
+    color: $gray;
+    font-size: 0;
+    width: 100%;
+    z-index: 100;
+    li {
+        display: inline-block;
+        @include box-size(190px, null);
+        @include box-sizing(border-box);
+        vertical-align: middle;
+        margin: 0 10px;
+        @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+            margin: auto;
+            @include box-size(180px, null);
+        }
+        a {
+            @include fontstyle(1rem, $gray, $lineheight, 500);
+            display: block;
+            padding: 5px 0;
+            border-bottom: 2px solid $gray;
+            &.current {
+                color: $orange;
+                border-bottom: 2px solid $orange;
+            }
+        }
+        &:hover {
+            a {
+                color: $orange;
+                border-bottom: 2px solid $orange;
+            }
+        }
+    }
+    .fb {
+        width: auto;
+        padding: 0 10px;
+        @include posabsl(5px, $right, null, null);
+        a {
+            border-bottom: none;
+            padding: 0;
+            line-height: 0;
+            &:hover {
+                border-bottom: none;
+            }
+        }
+    }
+}
+
+.indexcontent {
+    width: 85%;
+    max-width: 1024px;
+    margin: 0 auto;
+    @include posabsl(50%, null, null, 50%);
+    @include transform(translate(-50%, -50%));
+    @media only screen and (min-width: 1366px) {
+        max-width: 1280px;
+    }
+}
+
+.source {
+    max-width: 1024px;
+    padding-bottom: 20px;
+    text-align: left;
+    @include fontstyle(13px, #4C4948, 1.4, null);
+}
+
+.clientbtn {
+    width: 100%;
+    background-color: $white;
+    padding: 50px 0;
+    margin: auto;
+    ul {
+        max-width: 1024px;
+        @media only screen and (max-width: 1024px) {
+            max-width: 90%;
+        }
+        li {
+            max-width: 307px;
+            @include inline-block;
+            margin: 0 10px;
+            @media only screen and (max-width: 1024px) {
+                max-width: 250px;
+            }
+            img {
+                @include img-scalable;
+            }
+        }
+    }
+}
+
+// bottom info
+.bottom {
+    background-color: #F3F3F3;
+    height: auto;
+    position: relative;
+    text-align: left;
+    @include box-sizing(border-box);
+    a {
+        color: inherit;
+        text-decoration: underline;
+        &:hover {
+            color: $orange;
+        }
+    }
+    .indexcontent {
+        position: initial;
+        @include transform(initial);
+        padding: 50px 0;
+    }
+    header {
+        @include box-size($box_w, 70px);
+        border-top: 6px solid $gray;
+        @include box-sizing(border-box);
+        .logo_en {
+            background: url(../img/howtodo/morgan_logo_en.png) no-repeat right top;
+            @include box-size(157px, 68px);
+            @include background-size(100%);
+            display: block;
+            float: right;
+            margin-top: -6px;
+        }
+    }
+    h3 {
+        @include fontstyle(1rem, #4C4948, 2.1, 400);
+    }
+    p {
+        @include fontstyle(14px, #4C4948, 1.5, 400);
+    }
+    .orangetext {
+        @extend %orangetext;
+    }
+}

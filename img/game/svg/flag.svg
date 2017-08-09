@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="566px" height="87px" viewBox="0 0 566 87" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>flag</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="pc" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="index" transform="translate(-357.000000, -191.000000)">
+            <g id="tittle" transform="translate(357.000000, 191.000000)">
+                <g id="flag">
+                    <g>
+                        <polygon id="Fill-1" fill="#09587A" points="504.202528 7.77203753 502.365976 86.7320775 563.672325 86.7320775 554.594216 66.9928011 545.51758 47.2520575 554.594216 27.5127811 565.510351 7.77203753"></polygon>
+                        <polygon id="Fill-2" fill="#0A3B50" points="502.366566 78.9601867 502.366566 86.7311973 523.877514 78.9601867"></polygon>
+                        <polygon id="Fill-3" fill="#09587A" points="0 7.77203753 10.9146615 27.5127811 19.9927708 47.2520575 10.9146615 66.9928011 1.83655208 86.7320775 63.142901 86.7320775 61.306349 7.77203753"></polygon>
+                        <polygon id="Fill-4" fill="#0A3B50" points="41.6315109 78.9601867 63.1424589 86.7311973 63.1424589 78.9601867"></polygon>
+                        <polygon id="Fill-5" fill="#07668F" points="41.6319531 78.9607735 523.877219 78.9607735 523.877219 0.000733529412 41.6319531 0.000733529412"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

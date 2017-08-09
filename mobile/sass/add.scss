@@ -1,0 +1,579 @@
+// reset
+// @import "compass/reset";
+@import "compass/css3";
+// font style
+// web style
+@import "color";
+@import "mixin";
+@import "typography";
+// layout
+@import "layout";
+// form
+@import "form";
+@import "trans";
+// mid
+@mixin pos-mid {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include translate(-50%, -50%);
+}
+
+.wrap {
+    height: auto;
+}
+header img {
+    left: 0;
+    position: absolute;
+}
+// 穩定核心收益
+div.regular {
+    // regular page1
+    height: auto;
+    .page1 {
+        margin-top: 50px;
+        background: url(../img/regular/bg.png) repeat repeat;
+        background-size: 100%;
+        position: relative;
+        .part_top {
+            background: url(../img/regular/top_bg.png) no-repeat top;
+            background-size: 100%;
+        }
+        h2 {
+            @include fontstyle(1rem, #fff, 1.2, 700);
+            background: url(../img/regular/purple_flag.png) no-repeat;
+            display: inline-block;
+            background-size: 100%;
+            @include box-size(90%, 70px);
+            padding-top: 15px;
+        }
+        h3 {
+            @include fontstyle(1rem, #4D737D, 1.5, 700);
+        }
+        .threehigh_part {
+            .part {
+                text-align: center;
+                width: 80%;
+                margin: auto;
+                vertical-align: top;
+                padding: 15px 0;
+                h4 {
+                    display: inline-block;
+                    @include border-radius(8px);
+                    background-color: #7C8084;
+                    @include fontstyle(1.2rem, #fff, 1.5, 500);
+                    padding: 5px 35px;
+                }
+                .img_box {
+                    padding: 20px 0 10px 0;
+                    margin: auto;
+                    position: relative;
+                    text-align: center;
+                    img {
+                        width: 60%;
+                    }
+                    .m_flower {
+                        width: 50%;
+                    }
+                }
+                p {
+                    @include fontstyle(1rem, #404040, 1.5, 500);
+                    text-align: left;
+                }
+            }
+        }
+        .plant_man {
+            font-size: 0;
+            img {
+                width: 100%;
+            }
+        }
+    }
+    // regular page2
+    .page2 {
+        height: auto;
+        .partcontent {
+            text-align: center;
+            padding: 30px 0;
+            h2 {
+                @include fontstyle(1rem, #fff, 1.2, 700);
+                background: url(../img/regular/purple_flag.png) no-repeat;
+                display: inline-block;
+                background-size: 100%;
+                @include box-size(90%, 70px);
+                padding-top: 15px;
+            }
+            .part {
+                background-color: #B6D0D3;
+                @include border-radius(14px);
+                padding: 10px;
+                text-align: left;
+                max-width: 90%;
+                margin: 20px auto;
+                position: relative;
+                @include box-sizing(border-box);
+                .win_flower {
+                    position: absolute;
+                    top: -20px;
+                    right: 8%;
+                    width: 25%;
+                    img {
+                        width: 100%;
+                    }
+                    h4 {
+                        display: block;
+                        @include border-radius(8px);
+                        background-color: #7C8084;
+                        @include fontstyle(.8rem, #fff, 1.5, 500);
+                        padding: 5px 10px;
+                        @include pos-mid;
+                        width: 60px;
+                        text-align: center;
+                        top: 100%;
+                    }
+                }
+                h3 {
+                    @include fontstyle(1rem, #4B4B4B, 1.5, 700);
+                    span {
+                        color: #4F3E73;
+                    }
+                    padding-left: 10px;
+                    padding-right: 36%;
+                    // iphone5
+                    @media screen and (max-width: 374px) {
+                        font-size: .9rem;
+                        padding-right: 33%;
+                        padding-left: 5px;
+                    }
+                    // iphone6
+                    @media screen and (min-width: 375px) and (max-width: 413px) {}
+                    // iphone6+
+                    @media screen and (min-width: 414px) and (max-width: 959px) {
+                        font-size: 1.1rem;
+                    }
+                }
+                // iphone5
+                @media screen and (max-width: 374px) {
+                    .long {
+                        font-size: .75rem;
+                        padding-right: 36%;
+                    }
+                }
+                .chart {
+                    padding: 20px 0;
+                    img {
+                        width: 100%;
+                    }
+                }
+                .main {
+                    @include border-radius(5px);
+                    background-color: #FFF;
+                    @include box-size(95%, null);
+                    margin: auto;
+                    p {
+                        @include fontstyle(1rem, #4C4948, 1.5, 400);
+                        padding: 15px;
+                        text-align: left;
+                    }
+                }
+                p {
+                    @include fontstyle(.6rem, #4C4948, 1.5, 300);
+                    padding: 15px;
+                }
+            }
+        }
+    }
+    // regular page3
+    .page3 {
+        background: url(../img/regular/money_bg.png) no-repeat top #E2E2E2;
+        background-size: 100%;
+        position: relative;
+        text-align: left;
+        height: auto;
+        .partcontent {
+            padding: 30px 0 ;
+            .part {
+                padding: 0;
+                text-align: left;
+                max-width: 90%;
+                margin: 30px auto 0 auto;
+                position: relative;
+                .win_money {
+                    float: right;
+                    position: relative;
+                    text-align: center;
+                    margin-right: -10%;
+                    width: 55%;
+                    // iphone5
+                    @media screen and (max-width: 374px) {
+                         width: 53%;
+                    }
+                    img {
+                        width: 70%;
+                    }
+                    h4 {
+                        display: block;
+                        @include border-radius(8px);
+                        background-color: #7C8084;
+                        @include fontstyle(.8rem, #fff, 1.5, 500);
+                        padding: 5px 10px;
+                        @include pos-mid;
+                        width: 80px;
+                        text-align: center;
+                        top: 100%;
+                    }
+                }
+                .main {
+                    @include border-radius(5px);
+                    background-color: #FFF;
+                    @include box-size(95%, null);
+                    margin: 15px auto 25px auto;
+                    p {
+                        @include fontstyle(1rem, #4C4948, 1.5, 400);
+                        padding: 15px;
+                        text-align: left;
+                    }
+                }
+                h2 {
+                    @include fontstyle(1.1rem, #fff, 1.5, 700);
+                    background: url(../img/regular/purple_flag2.png) no-repeat;
+                    display: inline-block;
+                    background-size: 100%;
+                    @include box-size(80%, 56px);
+                    padding: 10px 0 0 15px;
+                    text-align: left;
+                }
+                h3 {
+                    @include fontstyle(1rem, #4B4B4B, 1.5, 700);
+                    span {
+                        color: #4F3E73;
+                    }
+                    padding-left: 0;
+                    // iphone5
+                    @media screen and (max-width: 374px) {
+                        font-size: .9rem;
+                        padding-left: 0;
+                    }
+                    // iphone6
+                    @media screen and (min-width: 375px) and (max-width: 413px) {
+                        
+                    }
+                    // iphone6+
+                    @media screen and (min-width: 414px) and (max-width: 959px) {
+                        font-size: 1.1rem;
+                    }
+                }
+                h4 {
+                    @include fontstyle(1.2rem, #4B4B4B, 1.3, 700);
+                    text-align: center;
+                    span {
+                        color: #4F3E73;
+                        font-size: 2rem;
+                        vertical-align: middle;
+                    }
+                    padding: 20px 0;
+                }
+                .chart {
+                    padding: 0;
+                    text-align: center;
+                    position: relative;
+                    img {
+                        width: 100%;
+                    }
+                }
+                .form {
+                    text-align: center;
+                    table {
+                        width: 100%;
+                        text-align: center;
+                        background-color: #FFF;
+                        border-top: 1px solid #979797;
+                        border-right: 1px solid #979797;
+                        margin-bottom: 20px;
+
+                        tr.title {
+                            background-color: #7E6CA2;
+                            color: #FFF;
+                        }
+                        td {
+                            padding: 5px 10px;
+                            text-align: center;
+                            border-bottom: 1px solid #979797;
+                            border-left: 1px solid #979797;
+                        }
+                        .no {
+                            @include fontstyle(1.1rem, #4F3E73, 1.5, 700);
+                        }
+                    }
+                }
+                .form_bottom {
+                    @include clear;
+                    table {
+                        text-align: center;
+                        background-color: #FFF;
+                        border-top: 1px solid #979797;
+                        border-right: 1px solid #979797;
+                        width: 100%;
+                        font-size: .6rem;
+                        tr.title {
+                            background-color: #B9B8BC;
+                            color: #FFF;
+                        }
+                        td {
+                            padding: 5px 10px;
+                            text-align: center;
+                            border-bottom: 1px solid #979797;
+                            border-left: 1px solid #979797;
+                        }
+                        .no {
+                            @include fontstyle(1rem, #4F3E73, 1.5, 700);
+                        }
+                    }
+                    p {
+                        @include fontstyle(.8rem, #4C4948, 1.5, 300);
+                        
+                        
+                        padding: 15px;
+                    }
+                }
+            }
+        }
+    }
+    .page5 {
+        background-color: #FFF;
+        height: auto;
+        padding: 30px 0 10px 0;
+        h2 {
+            @include fontstyle(1.5rem, #7C8084, 1.5, 700);
+        }
+    }
+}
+
+.mr38 {
+    margin-right: 38px!important;
+}
+
+.mt10 {
+    margin-top: 10px!important;
+}
+
+.mt13 {
+    margin-top: 13px!important;
+}
+
+.mb0 {
+    margin-bottom: 0px!important;
+}
+
+.mb2 {
+    margin-bottom: 2px!important;
+}
+
+.mb5 {
+    margin-bottom: 5px!important;
+}
+
+.mb6 {
+    margin-bottom: 6px!important;
+}
+
+.mb8 {
+    margin-bottom: 8px!important;
+}
+
+.mb10 {
+    margin-bottom: 10px!important;
+}
+
+.mb13 {
+    margin-bottom: 13px!important;
+}
+
+.mr28 {
+    margin-right: 28px!important;
+}
+
+.mr40 {
+    margin-right: 40px!important;
+}
+
+.wp1 {
+    // width: 255px!important;
+    margin-left: 14px;
+    line-height: 1.7;
+}
+
+.wp2 {
+    // width: 260px!important;
+    margin-left: 13px;
+    line-height: 1.4;
+    margin-top: 17px;
+    border-top-width: 1px;
+    border-top-style: dotted;
+    border-top-color: #CCC;
+    padding-top: 6px;
+}
+
+.w90 {
+    width: 150px!important;
+}
+
+.w245 {
+    width: 245px!important;
+}
+
+.font_color_brown {
+    @include fontstyle(1.1rem, #8A5926, 1.5, 700);
+    padding: 5px 0;
+    margin-top: 15px;
+    display: inline-block;
+}
+
+.font_color_red {
+    color: #C00;
+}
+
+.content_right {
+    width: 285px;
+    display: block;
+    float: right;
+    height: 680px;
+}
+
+#iframe {
+    position: absolute;
+    width: 315px;
+    height: 680px;
+    z-index: 500;
+    overflow: hidden;
+}
+
+.contact_form {
+    width: 90%;
+    margin: auto;
+    // height: 700px;
+    padding-top: 13px;
+    background-image: url(https://www.jpmrich.com.tw/B2C/event/2015Q1RSP/img/form_bg.png);
+    background-repeat: no-repeat;
+    border: 0px solid #CCC;
+    text-align: left;
+}
+
+.contact_form_group {
+    // margin-left: 15px;
+    width: 95%;
+    margin: auto;
+}
+
+.contact_form .form_row {
+    display: block;
+    margin-bottom: 10px;
+    color: #333333;
+    // height: 25px;
+}
+
+.contact_form .form_row span {
+    width: 150px;
+    display: inline-block;
+}
+
+.contact_form .inputform {
+    width: 90%;
+    background: #FFF;
+    border: 1px solid #dfddd9;
+    display: inline-block;
+    padding: 4px 5px 4px 5px;
+    font-size: 14px;
+    color: #666;
+    outline: none;
+    vertical-align: baseline;
+}
+
+.contact_form .radio_row {
+    display: inline-block;
+    margin-bottom: 3px;
+    margin-right: 15px;
+    color: #333333;
+    position: relative;
+    padding-left: 20px;
+    input{
+        position: absolute;
+        left:-5px;
+        top: 5px;
+    }
+}
+
+.contact_form .radio_row span {
+    width: 14px !important;
+}
+
+.contact_form .checkbox,
+.radio {
+    width: 14px;
+    height: 14px;
+    padding: 0 3px 0 0;
+    background: url(https://www.jpmrich.com.tw/B2C/event/2015Q1RSP/img/checkbox.png) no-repeat;
+    display: block;
+    clear: left;
+    float: left;
+}
+
+.contact_form .radio {
+    background: url(https://www.jpmrich.com.tw/B2C/event/2015Q1RSP/img/radio.png) no-repeat;
+}
+
+.contact_form .remark_scroll {
+    display: block;
+    width: 240px;
+    height: 80px;
+    overflow: scroll;
+    margin-top: 10px;
+    overflow-x: hidden;
+    background: #FFF;
+    color: #333333;
+    padding: 5px;
+}
+
+.contact_form .check_row {
+    display: block;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    @include fontstyle(1rem, #333, 1.5, 300);
+}
+
+.confirm_btn {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.btn_send {
+    display: inline-block;
+    @include fontstyle(1rem, #FFF, 1.5, 500);
+    border: 1px solid #663300;
+    background-color: #663300;
+    border-radius: 4px;
+    padding: 15px 50px;
+}
+
+// scroll
+#viewport {
+    width: 100%;
+    height: 150px;
+    margin: auto;
+    border: 1px solid #CCC;
+    @include border-radius(5px);
+    margin: 15px 0;
+}
+
+.overview {
+    padding: 20px;
+    @include fontstyle(.9rem, #333, 1.5, 300);
+}
+
+.noSelect {
+    user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+}

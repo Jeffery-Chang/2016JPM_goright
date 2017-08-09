@@ -1,0 +1,124 @@
+/* ----------------------- */
+/* Card Game CSS & FIX     */
+/* ----------------------- */
+.game footer p {
+  padding: 0;
+}
+
+.game .hand {
+  top: 10%;
+}
+@media screen and (max-width: 374px) {
+  .game .hand {
+    top: 8%;
+  }
+}
+.point_box {
+  left: 75%;
+}
+
+.cleaner{clear:both;width:100%;height:0;font-size:0}
+
+#gameTable {
+	position:relative;
+	width: 100%;
+	height:304px;
+	margin: 0 auto;
+
+	display: -webkit-box;
+	-webkit-box-pack: center;
+	-webkit-box-align: center;
+}
+
+#cards {
+	position: relative;
+	width: 305px;
+	height: 304px;
+	margin-top: 10px;
+}
+
+.PokerCard {
+	width: 90px;
+	height: 126px;
+	position: absolute;
+	-webkit-transition: all .5s;
+}
+
+.face {
+	border-radius:5px;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+
+	-webkit-transition-property: opacity, -webkit-transform, -webkit-box-shadow;
+	-webkit-transition-duration: .5s;
+	-webkit-backface-visibility: hidden;
+}
+
+.PokerFront {
+	z-index: 15;
+	-webkit-box-shadow: -4px 4px 0px rgba(0,0,0,.2);
+	-moz-box-shadow: -4px 4px 0px rgba(0,0,0,.2);
+	-ms-box-shadow: -4px 4px 0px rgba(0,0,0,.2);
+	box-shadow: -4px 4px 0px rgba(0,0,0,.2);
+}
+
+.PokerBack {
+	-webkit-transform: rotate3d(0,1,0, -180deg);
+	z-index: 13;
+}
+
+.PokerFlipped .face{
+	-webkit-box-shadow: -4px 4px 0px rgba(0,0,0,.2);
+	-moz-box-shadow: -4px 4px 0px rgba(0,0,0,.2);
+	-ms-box-shadow: -4px 4px 0px rgba(0,0,0,.2);
+	box-shadow: -4px 4px 0px rgba(0,0,0,.2);
+}
+.PokerFlipped .PokerFront{
+	-webkit-transform: rotate3d(0,1,0, 180deg);
+	z-index:13;
+}
+.PokerFlipped .PokerBack{
+	-webkit-transform: rotate3d(0,1,0, 0deg);
+	z-index:13;
+	-webkit-box-shadow: -4px 4px 0px rgba(0,0,0,.2);
+	-moz-box-shadow: -4px 4px 0px rgba(0,0,0,.2);
+	-ms-box-shadow: -4px 4px 0px rgba(0,0,.2);
+	box-shadow: -4px 4px 0px rgba(0,0,0,.2);
+}
+
+.PokerFront.Q {
+	z-index:15;
+}
+
+.PokerFlipped.Question .face{
+    z-index:13;
+}
+
+.PokerFlipped.Question .PokerBack{
+    z-index:13;
+}
+
+
+.backAA{background: url(../img/game/card/mA-A.png); background-size: 90px 126px}
+.backAQ{background: url(../img/game/card/mA-Q.png); background-size: 90px 126px}
+.back2A{background: url(../img/game/card/m2-A.png); background-size: 90px 126px}
+.back2Q{background: url(../img/game/card/m2-Q.png); background-size: 90px 126px}
+.back3A{background: url(../img/game/card/m3-A.png); background-size: 90px 126px}
+.back3Q{background: url(../img/game/card/m3-Q.png); background-size: 90px 126px}
+.back4A{background: url(../img/game/card/m4-A.png); background-size: 90px 126px}
+.back4Q{background: url(../img/game/card/m4-Q.png); background-size: 90px 126px}
+.back5A{background: url(../img/game/card/m5-A.png); background-size: 90px 126px}
+.back5Q{background: url(../img/game/card/m5-Q.png); background-size: 90px 126px}
+
+.b0{background: url(../img/game/card/mF01.png); background-size: 90px 126px}
+.b1{background: url(../img/game/card/mF02.png); background-size: 90px 126px}
+.b2{background: url(../img/game/card/mF03.png); background-size: 90px 126px}
+.b3{background: url(../img/game/card/mF04.png); background-size: 90px 126px}
+.b4{background: url(../img/game/card/mF05.png); background-size: 90px 126px}
+.b5{background: url(../img/game/card/mF06.png); background-size: 90px 126px}
+.b6{background: url(../img/game/card/mF07.png); background-size: 90px 126px}
+.b7{background: url(../img/game/card/mF08.png); background-size: 90px 126px}
+.b8{background: url(../img/game/card/mF09.png); background-size: 90px 126px}
+.b9{background: url(../img/game/card/mF10.png); background-size: 90px 126px}
+.Q {background: url(../img/game/card/mQ.png); background-size: 90px 126px}

@@ -1,0 +1,82 @@
+// css3
+@import "compass/css3";
+// font style
+@import "typography";
+@import "color";
+// icon
+@import "icon";
+// mixin
+@import "mixin";
+// flag
+@import "style";
+.award_btn {
+    padding-top: 10px;
+    a {
+        @include text_style(1rem, 400, $morgan_orange);
+    }
+}
+.game p {
+    
+    font-size: 14px;
+}
+.award {
+    padding: 30px 0;
+    height: auto;
+    h2 {
+        @extend %blue_flag;
+        text-align: center;
+        @extend %blue_title;
+        // for ipad
+        @media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+            width: 500px;
+            height: 77px;
+            background-size: 100% 100%;
+            padding-top: 5px;
+        }
+    }
+    .word {
+        width: 90%;
+        margin: 10px auto;
+        text-align: left;
+        h3 {
+            text-align: center;
+            @include text_style(16px, 400, $morgan_orange);
+        }
+        p {
+            @include text_style(15px, 400, $font_gray);
+        }
+        .notice {
+            .title {
+                display: inline-block;
+                background: $font_gray;
+                color: #FFF;
+                padding: 5px 10px;
+            }
+            @include text_style(12px, 400, #777);
+        }
+    }
+    // award list
+    .award_list {
+        width: 100%;
+        margin: 0 auto;
+        padding: 15px 0;
+        @include text_style(12px, 400, $font_gray);
+        table {
+            width: 100%;
+            tr{
+                background: #FFF;
+                &:nth-child(2n){
+                    background: #ECECEC;
+                }
+            }
+            td {
+                border-bottom: 1px solid #ECECEC;
+                text-align: center; 
+                width: 15%; 
+                &:nth-child(2n){
+                    width: 35%;
+                }              
+            }
+        }
+    }
+}

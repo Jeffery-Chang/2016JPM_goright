@@ -1,0 +1,40 @@
+section {
+    height: auto;
+}
+
+.indexcontent {
+    position: relative;
+    transform: none;
+    top: auto;
+    left: auto;
+}
+
+div.howtodo .page1 .videowrap .line {
+    margin: auto;
+}
+
+.bottom .indexcontent {
+    position: relative;
+    transform: none;
+    top: auto;
+    left: auto;
+}
+
+div.stable .page4,
+div.stable .page4 .chart .peopletalk {
+    z-index: -1;
+}
+
+.clientbtn ul {
+    margin: auto;
+}
+
+div.pursue .page6,
+div.howtodo .page2,
+div.howtodo .page4 {
+    height: 100%;
+}
+
+div.multiple .page2 .awarditem {
+    margin: auto;
+}

@@ -1,0 +1,560 @@
+// css3
+@import "compass/css3";
+// font style
+@import "typography";
+@import "color";
+// icon
+@import "icon";
+// mixin
+@import "mixin";
+// flag
+@import "style";
+// all style
+body,
+* {
+    -webkit-font-smoothing: antialiased;
+    @include box-sizing(border-box);
+}
+
+// a style
+a {
+    text-decoration: none;
+    @include transition(.5s);
+}
+// loading
+@import "loading";
+
+// nav
+// #menu .open ul li a.focus_game,
+// footer ul li a.focus_game {
+//     color: $morgan_blue;
+//     img {
+//         vertical-align: middle;
+//         display: inline-block;
+//         margin: 0 5px;
+//     }
+// }
+.mid {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding: 5% 0 10% 0;
+    // iphone5
+    @media screen and (max-width: 374px) {}
+    // iphone6
+    @media screen and (min-width: 375px) and (max-width: 413px) {
+        padding: 10% 0 15% 0;
+    }
+    // iphone6+
+    @media screen and (min-width: 414px) and (max-width: 959px) {
+        padding: 15% 0 20% 0;
+    }
+}
+
+// game style
+.game {
+    @extend %gray_style;
+    overflow-x: hidden;
+    position: relative;
+    h2 {
+        @extend %blue_flag;
+        text-align: center;
+        @extend %blue_title;
+    }
+    p {
+        padding: 2% 0;
+        .high {
+            display: block;
+            @include font-size(16px);
+        }
+    }
+    // poker
+    .poker_index {
+        width: calc(25% * 4);
+        @include box-sizing(border-box);
+        padding: 10px 25% 10px 0;
+        .card {
+            display: inline-block;
+            width: 25%;
+            margin: 0 5px;
+            img {
+                width: 100%;
+            }
+        }
+    }
+    // btn
+    .game_btn {
+        @include btn($morgan_orange, $morgan_blue);
+        .go {
+            color: #F8C73E;
+            padding-left: 10px;
+            font-size: 24px;
+            display: inline-block;
+        }
+        .trangle {
+            @extend %bebox;
+            @include arrow(right, 6px, #F8C73E);
+        }
+    }
+    .hand {
+        position: absolute;
+        pointer-events: none;
+        font-size: 0;
+        top: 28%;
+        right: -13%;
+        width: 45%;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+// flip style
+.flip {
+    @extend %gray_style;
+    .flip_mid {
+        width: 100%;
+    }
+    .rule_word {
+        text-align: center;
+        @include font-size(15px);
+        color: $morgan_blue;
+        padding-bottom: 5%;
+        .circle {
+            @include circle(30px);
+            background-color: $morgan_blue;
+            position: relative;
+            vertical-align: middle;
+            margin-right: 5px;
+            p {
+                @include pos-mid;
+                color: #FFF;
+                font-weight: 900;
+                @include font-size(20px);
+            }
+        }
+        h3{
+            @include text_style(18px, 800, $morgan_blue);
+            line-height: 1.3;
+            padding-bottom: 2%;
+        }
+
+        .small{
+            @include text_style(13px, 400, $morgan_orange);
+            line-height: 1.3;
+        }
+        // iphone5
+        @media screen and (max-width: 374px) {
+            .break{
+                display: block;
+                width: 0;
+                height: 0;
+            }
+        }
+        // iphone6
+        @media screen and (min-width: 375px) and (max-width: 413px) {
+            @include font-size(18px);
+            line-height: 1.3;
+            .break{
+                display: block;
+                width: 0;
+                height: 0;
+            }
+        }
+        // iphone6+
+        @media screen and (min-width: 414px) and (max-width: 959px) {
+            @include font-size(20px);
+            line-height: 1.5;
+        }
+
+    }
+    // flip
+    .poker_flip {
+        width: 100%;
+        padding: 5% 0;
+        .card {
+            display: inline-block;
+            width: 28%;
+            margin: 2% 2% 0 0;
+            img {
+                width: 100%;
+            }
+        }
+    }
+    // score
+    .score {
+        text-align: center;
+        background-color: #FFF;
+        padding: 2% 0;
+        line-height: 1;
+        position: relative;
+        img {
+            vertical-align: middle;
+        }
+        h4 {
+            @include text_style(16px, 400, $font_gray);
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .achievement {
+            @include text_style(34px, 800, $score_color);
+            display: inline-block;
+            vertical-align: middle;
+            .percent {
+                @include font-size(16px);
+            }
+        }
+    }
+}
+
+// cup style
+.a_award {
+    background: url(../img/game/svg/A_award.svg) no-repeat;
+    h5 {
+        @include text_style(12px, 500, #D5630D);
+    }
+}
+
+.b_award {
+    background: url(../img/game/svg/B_award.svg) no-repeat;
+    h5 {
+        @include text_style(12px, 500, #FFF);
+    }
+}
+
+.c_award {
+    background: url(../img/game/svg/C_award.svg) no-repeat;
+    h5 {
+        @include text_style(12px, 500, #FFF);
+    }
+}
+
+.d_award {
+    background: url(../img/game/svg/D_award.svg) no-repeat;
+    h5 {
+        @include text_style(12px, 500, #0E8346);
+    }
+}
+
+// award
+.award_wrap {
+    @extend %gray_style;
+    position: relative;
+    .mid {
+        width: 100%;
+        @extend %award_bg;
+        background-position: bottom;
+        position: relative;
+    }
+    .award_cup {
+        width: 201px;
+        height: 197px;
+        display: inline-block;
+        .score {
+            padding-top: 60px;
+            @include text_style(30px, 800, #FFF);
+            line-height: 1;
+            .percent {
+                @include font-size(16px);
+            }
+        }
+        h5 {
+            padding-top: 3px;
+        }
+        h2 {
+            padding-top: 40px;
+            @include text_style(20px, 800, #FFF);
+        }
+    }
+    .box {
+        @extend %gray_style;
+        padding-bottom: 5%;
+        h3 {
+            padding: 20px 0 5px 0;
+            @include text_style(15px, 600, $font_gray);
+            [class^='high_'] {
+                @extend .high;
+                @include font-size(18px);
+            }
+            .high_b {
+                color: #0E7EAE;
+            }
+            .high_c {
+                color: #58497D;
+            }
+            .high_d {
+                color: #0D964F;
+            }
+        }
+        p {
+            @include font-size(14px);
+            padding: 15px 0;
+            line-height: 1.5;
+        }
+    }
+}
+
+// break
+@media screen and (max-width: 413px) {
+    .break {
+        display: block;
+        width: 0;
+        height: 0;
+        text-indent: -999px;
+    }
+}
+
+.award_wrap .d_award h5 {
+    padding-top: 6px;
+}
+
+// share fb
+.share_fb {
+    @include btn($fb_blue, $font_gray);
+    a {
+        width: 80%;
+        .ic-fb {
+            display: inline-block;
+            padding-left: 10px;
+        }
+    }
+}
+
+// share fb
+.play_again {
+    @include btn($morgan_orange, $font_gray);
+    a {
+        width: 80%;
+    }
+}
+
+// people
+.people {
+    position: absolute;
+    bottom: 0;
+    pointer-events: none;
+    img {
+        width: 65%;
+    }
+}
+
+.people_box {
+    font-size: 0;
+    .arni {
+        left: -5%;
+    }
+    .plant {
+        right: -5%;
+    }
+}
+
+// iphone5
+@media screen and (max-width: 374px) {
+    // people c
+    .people_c {
+        .arni {
+            left: -10%;
+        }
+        .plant {
+            right: -13%;
+        }
+    }
+    // people d
+    .people_d {
+        .arni {
+            left: -10%;
+        }
+        .plant {
+            right: -18%;
+        }
+    }
+}
+
+// game pop
+.game_pop {
+    background-color: #FFF;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    z-index: 102;
+    // close btn
+    .close_btn {
+        background-color: #FFF;
+        text-align: center;
+        padding: 15px 0;
+        a {
+            display: inline-block;
+            color: $morgan_blue;
+            padding: 5px 15px;
+            border: 2px solid $morgan_blue;
+            @include font-size(16px);
+            @include border-radius(10px);
+            .ic-close {
+                @include font-size(14px);
+                display: inline-block;
+                padding-right: 10px;
+            }
+        }
+    }
+    .pop_mid {
+        @extend %gray_style;
+        padding: 5% 0;
+        h2 {
+            @extend %blue_flag;
+            text-align: center;
+            @extend %blue_title;
+            padding-top: 3%;
+            @include font-size(16px);
+        }
+        .pop_wording {
+            padding-top: 10px;
+        }
+        p {
+            @include font-size(14px);
+            line-height: 1.3;
+            .high {
+                @include text_style(22px, 800, $morgan_blue);
+            }
+        }
+        // form
+        .form {
+            width: 90%;
+            margin: auto;
+            // color
+            .chart_color {
+                p {
+                    @include text_style(11px, 400, null);
+                    text-align: left;
+                    position: relative;
+                    margin-left: 30px;
+                    padding: 3px 0;
+                    &:before {
+                        content: "";
+                        display: block;
+                        width: 15px;
+                        height: 5px;
+                        @include pos-mid;
+                        left: -15px;
+                    }
+                }
+                padding: 10px 0;
+            }
+            // color
+            .chart_a {
+                color: #0077A5;
+                &:before {
+                    background-color: #0077A5;
+                }
+            }
+            .chart_b {
+                color: #F39A2C;
+                &:before {
+                    background-color: #F39A2C;
+                }
+            }
+            .chart_c {
+                color: #CF1D02;
+                &:before {
+                    background-color: #CF1D02;
+                }
+            }
+            // chart
+            img {
+                width: 100%;
+                background-color: #FFF;
+                padding: 5%;
+                margin-top: 3%;
+            }
+            // word
+            .word {
+                p {
+                    @include text_style(14px, 400, null);
+                    text-align: left;
+                    padding: 5px 0;
+                }
+            }
+            //form
+            .form_top {
+                padding-top: 15px;
+            }
+            ul {
+                font-size: 0;
+                li {
+                    display: inline-block;
+                    width: 15%;
+                    @include text_style(14px, 400, $font_gray);
+                    background-color: #E9E9E9;
+                    margin: 1px 0;
+                    padding: 3px 0;
+                    vertical-align: middle;
+                    background-color: #FFF;
+                    
+                    line-height: 1.5;
+                    &:first-child {
+                        width: 52%;
+                    }
+                }
+            }
+            .form_list {
+                margin: 10px 0;
+                ul:first-child li {
+                    background-color: $morgan_blue;
+                    color: #FFF;
+                    @include vm;
+                    height: 115px;
+                }
+                ul:first-child li.title {
+                    @include font-size(13px);
+                    &:before {
+                        content:none;
+                        display: block;
+                    }
+                    position: relative;
+                    p{
+                        @include pos-mid;
+                        width: 100%;
+                        @include text_style(13px, 400, #FFF);
+                    }
+                }
+                &:last-child {
+                    ul:first-child li {
+                        background-color: $morgan_orange;
+                        color: #FFF;
+                    }
+                }
+            }
+        }
+        // from
+        .from {
+            @include text_style(11px, 400, #666);
+            padding-top: 10px;
+        }
+    }
+}
+
+// point
+@import "animation";
+.point_box {
+    @include pos-mid;
+    left: 80%;
+    top: 20%;
+    .point {
+        @include text_style(30px, 800, null);
+        line-height: 1;
+        position: absolute;
+        width: 100%;
+    }
+    .gain {
+        color: #D5620D;
+        @include animation(pop 1s infinite ease);
+    }
+    .lose {
+        color: #0D964F;
+        @include animation(pop 1s infinite ease);
+    }
+}
+
+
+// tips
+@import "tips";

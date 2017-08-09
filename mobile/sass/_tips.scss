@@ -1,0 +1,29 @@
+.tips {
+    background: rgba(0, 0, 0, .5);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 12;
+    p.words {
+        @include text_style(16px, 600, #FFF);
+        text-align: left;
+        line-height: 1.3;
+        @include pos-mid;
+        width: 240px;
+        top: 30%;
+        left: 75%;
+        .high{
+            @include font-size(24px);
+        }
+    }
+    a.tips_btn{
+    	border:2px solid #FFF;
+    	@include border-radius(15px);
+    	@include text_style(18px, 600, #FFF);
+    	padding: 8px 30px;
+    	display: block;
+    	@include pos-mid;
+        top: 68%;
+        background-color: $morgan_orange;
+    }
+}

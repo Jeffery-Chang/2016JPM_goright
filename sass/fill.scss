@@ -1,0 +1,459 @@
+// css3
+@import "compass/css3";
+// font style
+@import "typography";
+@import "color";
+// icon
+@import "icon";
+// mixin
+@import "mixin";
+// flag
+@import "style";
+// all style
+body,
+* {
+    -webkit-font-smoothing: antialiased;
+    @include box-sizing(border-box);
+}
+
+// a style
+a {
+    text-decoration: none;
+    @include transition(.5s);
+}
+
+section {
+    @media only screen and (max-height: 780px) {
+        height: auto;
+        overflow: auto;
+    }
+}
+
+.mid {
+    @include pos-mid;
+    @media only screen and (max-height: 780px) {
+        @include none-mid;
+        margin-top: 170px;
+        padding-bottom: 100px;
+    }
+}
+
+// fill form
+.fill_form {
+    // @include pos-mid;
+    // left: 75%;
+    // top: 55%;
+    background-color: #FFF;
+    padding: 15px;
+    width: 830px;
+    margin: auto;
+    padding: 2% 5%;
+    @include text_style(16px, 400, #333);
+    text-align: center;
+    h3 {
+        text-align: center;
+        line-height: 1.3;
+        @media only screen and (max-width: 1230px) {
+            .break {
+                display: block;
+                width: 0;
+                height: 0;
+                text-indent: -9999px;
+            }
+        }
+    }
+    .mr38 {
+        margin-right: 0!important;
+    }
+    .mt10 {
+        margin-top: 0!important;
+    }
+    .mt13 {
+        margin-top: 0!important;
+    }
+    .mb0 {
+        margin-bottom: 0!important;
+    }
+    .mb2 {
+        margin-bottom: 0!important;
+    }
+    .mb5 {
+        margin-bottom: 0!important;
+    }
+    .mb6 {
+        margin-bottom: 0!important;
+    }
+    .mb8 {
+        margin-bottom: 0!important;
+    }
+    .mb10 {
+        margin-bottom: 0!important;
+    }
+    .mb13 {
+        margin-bottom: 0!important;
+    }
+    .mr28 {
+        margin-right: 0!important;
+    }
+    .mr40 {
+        margin-right: 0!important;
+    }
+    .wp1 {
+        // width: 255px!important;
+        margin-left: 14px;
+        line-height: 1.7;
+    }
+    .wp2 {
+        // width: 260px!important;
+        margin-left: 13px;
+        line-height: 1.4;
+        margin-top: 17px;
+        border-top-width: 1px;
+        border-top-style: dotted;
+        border-top-color: #CCC;
+        padding-top: 6px;
+    }
+    .w90 {
+        width: 150px!important;
+    }
+    .w245 {
+        width: 245px!important;
+    }
+    .font_color_brown {
+        @include text_style(16px, 700, #8A5926);
+        padding: 3% 0;
+        margin-top: 0;
+        display: inline-block;
+    }
+    .font_color_red {
+        color: #C00;
+    }
+    .content_right {
+        width: auto;
+        display: block;
+        float: right;
+        height: 680px;
+    }
+    .contact_form {
+        width: auto;
+        margin: auto;
+        // height: 700px;
+        padding-top: 13px;
+        background-image: url(https://www.jpmrich.com.tw/B2C/event/2015Q1RSP/img/form_bg.png);
+        background-repeat: no-repeat;
+        border: 0px solid #CCC;
+        text-align: left;
+    }
+    .contact_form_group {
+        margin-left: 15px;
+    }
+    .contact_form .form_row {
+        display: block;
+        margin-bottom: 1.5%;
+        color: #333333;
+        @include font-size(13px);
+    }
+    .contact_form .form_row span {
+        width: 80px;
+        display: inline-block;
+    }
+    .contact_form .inputform {
+        width: 50%;
+        background: #FFF;
+        border: 1px solid #dfddd9;
+        display: inline-block;
+        padding: 2px;
+        font-size: 14px;
+        color: #666;
+        outline: none;
+        vertical-align: baseline;
+    }
+    .contact_form .radio_row {
+        display: inline-block;
+        margin-bottom: 2px;
+        margin-right: 0;
+        color: #333333;
+        @include font-size(13px);
+    }
+    .contact_form .radio_row span {
+        width: 14px !important;
+    }
+    .contact_form .checkbox,
+    .radio {
+        width: 14px;
+        height: 14px;
+        padding: 0 3px 0 0;
+        background: url(https://www.jpmrich.com.tw/B2C/event/2015Q1RSP/img/checkbox.png) no-repeat;
+        display: block;
+        clear: left;
+        float: left;
+    }
+    .contact_form .radio {
+        background: url(https://www.jpmrich.com.tw/B2C/event/2015Q1RSP/img/radio.png) no-repeat;
+    }
+    .contact_form .remark_scroll {
+        display: block;
+        width: 240px;
+        height: 80px;
+        overflow: scroll;
+        margin-top: 10px;
+        overflow-x: hidden;
+        background: #FFF;
+        color: #333333;
+        padding: 5px;
+    }
+    .contact_form .check_row {
+        display: block;
+        margin-bottom: 0;
+        margin-top: 0;
+        @include text_style(13px, 400, #333);
+    }
+    .confirm_btn {
+        text-align: center;
+        padding: 20px 0;
+    }
+    .btn_send {
+        display: inline-block;
+        @include text_style(13px, 700, #FFF);
+        border: 1px solid #663300;
+        background-color: #663300;
+        border-radius: 4px;
+        padding: 5px 20px;
+    }
+    // scroll
+    #viewport {
+        width: 100%;
+        height: 100px;
+        border: 1px solid #CCC;
+        @include border-radius(5px);
+        margin: 3% auto;
+    }
+    .overview {
+        padding: 10px;
+        @include text_style(13px, 300, #666);
+    }
+    .noSelect {
+        user-select: none;
+        -o-user-select: none;
+        -moz-user-select: none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+    }
+    p.notice {
+        @include text_style(13px, 300, #666);
+    }
+}
+
+// fill
+.fill {
+    padding: 150px 0 100px;
+    height: auto;
+    background: url(../img/game/fill/fill_bg.png) $bg_color center no-repeat;
+    background-attachment: fixed;
+    text-align: center;
+    position: relative;
+    h2 {
+        @extend %blue_flag;
+        text-align: center;
+        @extend %blue_title;
+        margin: auto;
+    }
+    .fill_part {
+        text-align: left;
+        width: 500px;
+        margin: auto;
+        p {
+            @include font-size(16px);
+            padding: 15px 0;
+            .high {
+                display: inline-block;
+                @include font-size(20px);
+            }
+            .blue {
+                @include text_style(22px, 700, $morgan_blue);
+            }
+        }
+    }
+    // fill btn
+    .fill_btn {
+        margin-bottom: 3%;
+        a {
+            display: block;
+            margin: 10px 0;
+            width: 80%;
+            background: $morgan_orange;
+            padding: 10px 18px;
+            @include text_style(18px, 700, #FFF);
+            &:hover {
+                background: $morgan_blue;
+            }
+            &:last-child {
+                background: #02D000;
+                span {
+                    @include font-size(24px);
+                }
+                &:hover {
+                    background: $morgan_blue;
+                }
+            }
+        }
+    }
+    .fill_left {
+        display: inline-block;
+        width: 500px;
+        margin-bottom: 20px;
+    }
+    .fill_people {
+        display: inline-block;
+        font-size: 0;
+        vertical-align: bottom;
+    }
+    .clear {
+        @extend %clearfix;
+    }
+}
+
+// 
+.fund {
+    @extend %gray_style;
+    background-image: url(../img/game/fill/fill_top_bg.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+    height: auto;
+    .fund_content {
+        padding: 50px 0 0 0;
+    }
+    h2 {
+        @extend %blue_flag;
+        text-align: center;
+        @extend %blue_title;
+        margin: auto;
+    }
+    .part {
+        display: inline-block;
+        width: 300px;
+        line-height: 1.3;
+        margin: 50px 8px 30px 8px;
+        vertical-align: middle;
+        h3 {
+            @include text_style(18px, 700, #666);
+        }
+        .feature {
+            background: url(../img/game/svg/box_w.svg) no-repeat;
+            width: 303px;
+            height: 200px;
+            position: relative;
+            margin-top: 60px;
+            h4 {
+                width: 268px;
+                height: 74px;
+                padding-top: 10px;
+                text-align: center;
+                @include text_style(16px, 700, #FFF);
+                @include pos-mid;
+                top: 0;
+            }
+            ul {
+                text-align: left;
+                padding-top: 55px;
+                @include text_style(14px, 400, #666);
+                width: 80%;
+                margin: auto;
+                li {
+                    margin-bottom: 10px;
+                    position: relative;
+                    margin-left: 40px;
+                    span {
+                        @include text_style(16px, null, #0D964F);
+                        display: block;
+                        @include pos-mid;
+                        left: -20px;
+                    }
+                }
+            }
+        }
+    }
+    // a
+    .feature_a {
+        h3 {
+            .high {
+                color: $morgan_orange;
+            }
+        }
+        h4 {
+            background: url(../img/game/svg/flagA.svg) no-repeat;
+        }
+    }
+    // b
+    .feature_b {
+        h3 {
+            .high {
+                color: $fund_blue;
+            }
+        }
+        h4 {
+            background: url(../img/game/svg/flagB.svg) no-repeat;
+        }
+    }
+    // c
+    .feature_c {
+        h3 {
+            .high {
+                color: $fund_purple;
+            }
+        }
+        h4 {
+            background: url(../img/game/svg/flagC.svg) no-repeat;
+        }
+    }
+    .feature_list {
+        .feature_main {
+            width: 300px;
+            margin: 0 8px;
+            display: inline-block;
+            vertical-align: bottom;
+            position: relative;
+            h5 {
+                @include text_style(24px, 700, #FFF);
+                position: absolute;
+                left: 0;
+                right: 0;
+                margin: auto;
+                bottom: 30px;
+            }
+        }
+        .fund_a {
+            background: url(../img/game/fill/a_flower.png) no-repeat;
+            height: 311px;
+        }
+        .fund_b {
+            background: url(../img/game/fill/b_tree.png) no-repeat;
+            height: 353px;
+        }
+        .fund_c {
+            background: url(../img/game/fill/c_tomato.png) no-repeat;
+            height: 338px;
+        }
+    }
+    .fund_bottom{
+        background: url(../img/game/fill/fill_bottom_bg.png) bottom center no-repeat;
+        .fund_bottom_main{
+            text-align: center;
+            .circle{
+                background: url(../img/game/fill/circle_w.png)no-repeat;
+                width: 416px;
+                height: 160px;
+                margin: 40px auto 0 auto;
+                h5{
+                    @include text_style(28px, 700, $morgan_orange);
+                    padding-top: 55px;
+                    line-height: 1.5;
+                }
+            }
+            .w{
+                height: 15px;
+                background: #FFF;
+            }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="300px" height="85px" viewBox="0 0 300 85" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>flagA</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="pc" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="fill" transform="translate(-91.000000, -1771.000000)">
+            <g id="part03" transform="translate(-13.000000, 800.000000)">
+                <g id="Group-2" transform="translate(35.000000, 200.000000)">
+                    <g id="01" transform="translate(0.000000, 24.000000)">
+                        <g id="flower" transform="translate(69.000000, 508.000000)">
+                            <g id="tittle" transform="translate(0.000000, 239.000000)">
+                                <g id="flagA">
+                                    <g id="flagB">
+                                        <polygon id="Fill-1" fill="#D86F0A" points="238.292498 6.59185475 237.42452 73.561824 266.398677 73.561824 262.108247 56.8199538 257.818515 40.0768394 262.108247 23.3349692 267.267351 6.59185475"></polygon>
+                                        <polygon id="Fill-2" fill="#79420D" points="237.424799 66.9700937 237.424799 73.5610774 247.591145 66.9700937"></polygon>
+                                        <polygon id="Fill-3" fill="#D86F0A" points="0 6.59185475 5.15840718 23.3349692 9.4488366 40.0768394 5.15840718 56.8199538 0.867977765 73.561824 29.8421344 73.561824 28.9741567 6.59185475"></polygon>
+                                        <polygon id="Fill-4" fill="#79420D" points="19.6755791 66.9700937 29.8419254 73.5610774 29.8419254 66.9700937"></polygon>
+                                        <polygon id="Fill-5" fill="#EB8726" points="19.6757881 66.9705914 247.591006 66.9705914 247.591006 0.000622143076 19.6757881 0.000622143076"></polygon>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
